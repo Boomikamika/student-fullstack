@@ -137,8 +137,9 @@ function StudentPage() {
 
   const filteredStudents = students.filter((student) =>
     (student.name || "")
+      .trim()
       .toLowerCase()
-      .includes(search.toLowerCase())
+      .includes(search.trim().toLowerCase())
   );
 
   return (
